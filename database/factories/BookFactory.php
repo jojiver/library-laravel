@@ -26,6 +26,7 @@ class BookFactory extends Factory
             'quantity' => 5,
             'available_quantity' => 5,
             'status' => 'available',
+            'description' => fake()->paragraphs(2, true),
         ];
     }
 

@@ -34,6 +34,8 @@ class Book extends Model
         'quantity',
         'available_quantity',
         'status',
+        'description',
+        'book_image',
     ];
 
     /**

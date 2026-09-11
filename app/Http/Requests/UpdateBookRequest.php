@@ -32,6 +32,8 @@ class UpdateBookRequest extends FormRequest
             'quantity' => ['required', 'integer', 'min:1'],
             'available_quantity' => ['required', 'integer', 'min:0'],
             'status' => ['required', Rule::in(['available', 'unavailable'])],
+            'description' => ['sometimes', 'nullable', 'string', 'max:5000'],
+            'book_image' => ['sometimes', 'nullable', 'image', 'mimes:jpeg,jpg,png,webp,gif', 'max:2048'],
         ];
     }
 

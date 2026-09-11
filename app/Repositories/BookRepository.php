@@ -30,7 +30,7 @@ class BookRepository implements BookRepositoryInterface
         }
 
         if (! empty($filters['category'])) {
-            $query->where('category', $filters['category']);
+            $query->whereIn('category', (array) $filters['category']);
         }
 
         if (! empty($filters['status'])) {
